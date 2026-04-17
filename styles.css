@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+#event-name {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 15px;
+    border-radius: 15px;
+    min-width: 100px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.time-box p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+
+#message {
+    margin-top: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .countdown {
+        gap: 15px;
+    }
+    .time-box {
+        min-width: 80px;
+    }
+    .time-box span {
+        font-size: 2.8em;
+    }
+}
