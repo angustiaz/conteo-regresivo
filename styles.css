@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: #000000;           /* Fondo negro puro */
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -9,93 +9,87 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 40px;
 }
 
 h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 #event-name {
-    font-size: 1.4em;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    font-size: 1.6em;
+    margin-bottom: 60px;
+    opacity: 0.85;
+    font-weight: 300;
 }
 
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
-.time-box {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px 15px;
-    border-radius: 15px;
-    min-width: 100px;
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.time-box span {
-    display: block;
-    font-size: 3.5em;
-    font-weight: bold;
+.time-unit span {
+    font-size: 6.5rem;           /* Números muy grandes */
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -4px;
 }
 
-.time-box p {
-    margin: 5px 0 0;
-    font-size: 1.1em;
-    opacity: 0.8;
+.time-unit p {
+    font-size: 1.3em;
+    margin: 0;
+    opacity: 0.7;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 #message {
-    margin-top: 30px;
-    font-size: 1.8em;
-    font-weight: bold;
+    margin-top: 80px;
+    font-size: 2.2em;
+    font-weight: 300;
 }
 
 .hidden {
     display: none;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive - para celulares */
+@media (max-width: 768px) {
     .countdown {
-        gap: 15px;
+        gap: 40px;
     }
-    .time-box {
-        min-width: 80px;
+    .time-unit span {
+        font-size: 4.8rem;
     }
-    .time-box span {
-        font-size: 2.8em;
+    h1 {
+        font-size: 2.2em;
+    }
+    #event-name {
+        font-size: 1.4em;
     }
 }
-// === Música de fondo ===
-const music = document.getElementById('background-music');
-const musicBtn = document.getElementById('music-btn');
 
-let isPlaying = false;
-
-musicBtn.addEventListener('click', () => {
-    if (isPlaying) {
-        music.pause();
-        musicBtn.textContent = '🎵 Reproducir música';
-    } else {
-        music.play().catch(err => {
-            console.log("No se pudo reproducir automáticamente:", err);
-            alert("Haz clic en el botón para reproducir la música (política de navegadores)");
-        });
-        musicBtn.textContent = '⏸️ Pausar música';
+@media (max-width: 480px) {
+    .countdown {
+        gap: 30px;
     }
-    isPlaying = !isPlaying;
-});
-
-// Opcional: Iniciar muted y luego subir volumen después de interacción
-// music.volume = 0.4;  // entre 0 y 1
+    .time-unit span {
+        font-size: 3.8rem;
+    }
+}
