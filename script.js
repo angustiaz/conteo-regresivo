@@ -31,3 +31,22 @@ const countdown = setInterval(() => {
     minutesEl.textContent = String(minutes).padStart(2, '0');
     secondsEl.textContent = String(seconds).padStart(2, '0');
 }, 1000);
+.music-control {
+    margin-top: 30px;
+}
+
+#music-btn {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#music-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
