@@ -33,7 +33,7 @@ h1 {
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 600px;
+    gap: 200px;
     flex-wrap: wrap;
 }
 
@@ -45,7 +45,7 @@ h1 {
 
 .time-unit span {
     font-size: 6.5rem;           /* Números muy grandes */
-    font-weight: 700;
+    font-weight: 200;
     line-height: 1;
     margin-bottom: 8px;
     letter-spacing: -4px;
@@ -55,7 +55,7 @@ h1 {
     font-size: 1.3em;
     margin: 0;
     opacity: 0.7;
-    font-weight: 600;
+    font-weight: 200;
     letter-spacing: 1px;
 }
 
