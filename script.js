@@ -1,5 +1,5 @@
 // Cambia esta fecha por la que quieras (formato: "Mes Día, Año Hora:Min:Seg")
-const targetDate = new Date("December 31, 2026 23:59:59").getTime();
+const targetDate = new Date("April 01, 2026 23:59:59").getTime();
 
 const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
