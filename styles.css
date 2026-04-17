@@ -33,7 +33,7 @@ h1 {
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 200px;
     flex-wrap: wrap;
 }
 
